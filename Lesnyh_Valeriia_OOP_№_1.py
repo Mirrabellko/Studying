@@ -2,10 +2,10 @@
 #1
 class Animal:
     def __init__(self, name: str, kind: str, age: float, sound: str) -> None:
-        self.name = name
-        self.kind = kind
-        self.age = age
-        self.sound = sound
+        self.__name = name
+        self.__kind = kind
+        self.__age = age
+        self.__sound = sound
 
     def get_info(self):
         print(f"Name: {self.name} \n Kind: {self.kind} \n Age: {self.age}")
@@ -30,9 +30,9 @@ horse.get_sound()
 #2
 class Book:
     def __init__(self, name: str, author: str, num_pages: int) -> None:
-        self.name = name
-        self.author = author
-        self.num_pages = num_pages
+        self.__name = name
+        self.__author = author
+        self.__num_pages = num_pages
 
     def info(self):
         print(f"Name: {self.name} \n Author: {self.author} \n Pages: {self.num_pages}")
@@ -59,11 +59,11 @@ book3.open_page(200)
 #3
 class PassengerPlane:
     def __init__(self, brand: str, model: str, capacity: int, cur_height: float, cur_speed: float) -> None:
-        self.brand = brand
-        self.model = model
-        self.capacity = capacity
-        self.cur_height = cur_height
-        self.cur_speed = cur_speed
+        self.__brand = brand
+        self.__model = model
+        self.__capacity = capacity
+        self.__cur_height = cur_height
+        self.__cur_speed = cur_speed
 
     def info(self):
         print(f"Information about current aircraft")
@@ -112,12 +112,12 @@ aircraft3.change_speed(300)
 aircraft3.info()
 
 
-
+#4
 class MusicAlbum:
     def __init__(self, singer_name: str, album_name: str, genre: str, tracklist: list):
-        self.singer_name = singer_name
-        self.album_name = album_name
-        self.genre = genre
+        self.__singer_name = singer_name
+        self.__album_name = album_name
+        self.__genre = genre
         self.tracklist = tracklist
 
     def add_track(self, new_track: str):
@@ -163,6 +163,7 @@ album3.add_track("track8")
 album3.add_track("track9")
 album3.info()
 
+#5
 class Fraction:
     def __init__(self, num: int, den: int):
         self.num = num
